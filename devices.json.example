@@ -1,22 +1,23 @@
 [
     {
-        "name": "CISCO_2801_XXXX_00_CTY",
+        "name": "CISCO_2801_XXX_00_CTY",
         "address": "127.0.0.1",
         "port": 22,
         "user": "user",
         "password": "password",
+        "command": "show call active voice brief",
         "cics": [
             {
-                "LC": {
-                    "CIC_START": 1,
-                    "CIC_COUNT": 30,
-                    "CIC_MATCH": "0/3/0."
-                },
-                "LDN": {
-                    "CIC_START": 129,
-                    "CIC_COUNT": 30,
-                    "CIC_MATCH": "0/3/1."
-                }
+                "CIC_NAME": "LC",
+                "CIC_START": 1,
+                "CIC_COUNT": 30,
+                "CIC_MATCH": "0/3/0."
+            },
+            {
+                "CIC_NAME": "LDN",
+                "CIC_START": 129,
+                "CIC_COUNT": 30,
+                "CIC_MATCH": "0/3/1."
             }
         ]
     }

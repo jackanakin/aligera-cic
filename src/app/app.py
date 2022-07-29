@@ -1,7 +1,12 @@
 from app.util.SshClientUtil import SshClient
 import app.services.GetCicService as GetCicService
+import app.services.ParseDevicesService as ParseDevicesService
 
 def run():
     print("app started")
-    GetCicService.run(address='172.16.254.194', port=22, user='bradmin', password='brasrede')
+    deviceList = ParseDevicesService.run()
+
+    for device in deviceList:
+        GetCicService.run(device)
+
     print("app finished")
