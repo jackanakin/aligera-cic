@@ -6,6 +6,7 @@
         "user": "user",
         "password": "password",
         "command": "show call active voice brief",
+        "regex": "\\[\\d\/\\d\/\\d.(\\d{1,2})]",
         "cics": [
             {
                 "CIC_NAME": "LC",

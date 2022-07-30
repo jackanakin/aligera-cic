@@ -17,8 +17,9 @@ def run():
         user = each['user']
         password = each['password']
         command = each['command']
+        regex = each['regex']
 
-        device = Device(name, address, port, user, password, command)
+        device = Device(name, address, port, user, password, command, regex)
         cicList: List[Cic] = []
 
         for eachCic in each['cics']:
