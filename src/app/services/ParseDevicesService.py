@@ -2,14 +2,13 @@ import json
 from typing import List
 
 from app.models.Device import Device 
-from app.models.Cic import Cic 
+from app.models.Slot import Slot 
 
 def run():
     deviceList: List[Device] = []
-    
     file = open("devices.json", "r")
-
     deviceDict: List[Device] = json.load(file)
+    
     for each in deviceDict:
         name = each['name']
         address = each['address']
@@ -20,18 +19,18 @@ def run():
         regex = each['regex']
 
         device = Device(name, address, port, user, password, command, regex)
-        cicList: List[Cic] = []
+        slotList: List[Slot] = []
 
-        for eachCic in each['cics']:
-            CIC_NAME = eachCic['CIC_NAME']
-            CIC_START = eachCic['CIC_START']
-            CIC_COUNT = eachCic['CIC_COUNT']
-            CIC_MATCH = eachCic['CIC_MATCH']
+        for eachSlot in each['slotList']:
+            NAME = eachSlot['NAME']
+            CIC_START = eachSlot['CIC_START']
+            CIC_COUNT = eachSlot['CIC_COUNT']
+            CIC_MATCH = eachSlot['CIC_MATCH']
 
-            cic = Cic(CIC_NAME, CIC_START, CIC_COUNT, CIC_MATCH)
-            cicList.append(cic)
+            slot = Slot(NAME, CIC_START, CIC_COUNT, CIC_MATCH)
+            slotList.append(slot)
 
-        device.cicList = cicList
+        device.slotList = slotList
         deviceList.append(device)
 
     return deviceList

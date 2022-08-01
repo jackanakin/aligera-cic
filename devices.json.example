@@ -1,21 +1,21 @@
 [
     {
-        "name": "CISCO_2801_XXX_00_CTY",
+        "name": "CISCO_2801_AOI_01_ETA",
         "address": "127.0.0.1",
         "port": 22,
-        "user": "user",
-        "password": "password",
+        "user": "brasrede",
+        "password": "brasrede",
         "command": "show call active voice brief",
         "regex": "\\[\\d\/\\d\/\\d.(\\d{1,2})]",
-        "cics": [
+        "slotList": [
             {
-                "CIC_NAME": "LC",
+                "NAME": "LC",
                 "CIC_START": 1,
                 "CIC_COUNT": 30,
                 "CIC_MATCH": "0/3/0."
             },
             {
-                "CIC_NAME": "LDN",
+                "NAME": "LDN",
                 "CIC_START": 129,
                 "CIC_COUNT": 30,
                 "CIC_MATCH": "0/3/1."

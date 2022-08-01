@@ -1,5 +1,5 @@
 from typing import List
-from app.models.Cic import Cic 
+from app.models.Slot import Slot 
 
 class Device:
   def __init__(self, name, address, port, user, password, command, regex):
@@ -10,4 +10,4 @@ class Device:
     self.password:str = password
     self.command:str = command
     self.regex:str = regex
-    self.cicList:List[Cic] = []
+    self.slotList:List[Slot] = []
