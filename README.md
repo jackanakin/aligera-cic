@@ -7,7 +7,7 @@ Lê por SSH uso de canal, para isso carrega devices.json onde:
     Ex: [0/3/1.30] contem "0/3/1." então é LDN
 
 ## Os comandos listados são executados na raíz do projeto, aqui onde este arquivo README.md está localizado
-> Configurações de acesso aos equipamentos colocar no arquivo '.env', seguir o exemplo do arquivo '.env.example'
+> Configurações de acesso aos equipamentos colocar no arquivo 'devices.json', seguir o exemplo do arquivo 'devices.json.example'
 
 ### 1. Para instalar as dependências do Python
 Cria ambiente virtual do python para não misturar dependências instaladas na máquina local
@@ -27,4 +27,6 @@ Ativa o ambiente virtual do python
 > source venv/bin/activate
 
 Executar
-> python src/run.py 
+> python src/http-server.py 
+
+Acessar http://localhost:8000
