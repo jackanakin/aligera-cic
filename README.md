@@ -12,7 +12,7 @@ Lê por SSH uso de canal, para isso carrega "json/devices.json" onde:
 
 > docker run -d -it -p 8000:8000 -v "$(pwd)"/json:/opt/json jackanakin/aligera-cic
 
-## 2.Manual
+## 2. Manual
 
 Cria ambiente virtual do python para não misturar dependências instaladas na máquina local
 > python3 -m venv venv
@@ -29,7 +29,10 @@ Instala as dependências do programa com o pip
 Executar
 > python src/http-server.py
 
-## Acessando
+## 3. Acessando
 
 http://localhost:8000
 
+## 4. Resultado
+
+![alt text](https://github.com/jackanakin/aligera-cic/blob/main/result.png?raw=true)
