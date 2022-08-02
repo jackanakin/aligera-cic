@@ -6,9 +6,9 @@ from app.models.Slot import Slot
 
 def run():
     deviceList: List[Device] = []
-    file = open("devices.json", "r")
+    file = open("json/devices.json", "r")
     deviceDict: List[Device] = json.load(file)
-    
+
     for each in deviceDict:
         name = each['name']
         address = each['address']

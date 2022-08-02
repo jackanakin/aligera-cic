@@ -1,5 +1,5 @@
 venv/
 __pycache__
 .env
-devices.json
+json/devices.json
 .DS_Store

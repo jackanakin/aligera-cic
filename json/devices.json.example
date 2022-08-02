@@ -9,16 +9,28 @@
         "regex": "\\[\\d\/\\d\/\\d.(\\d{1,2})]",
         "slotList": [
             {
-                "NAME": "LC",
+                "NAME": "ETA_LC",
                 "CIC_START": 1,
                 "CIC_COUNT": 30,
                 "CIC_MATCH": "0/3/0."
             },
             {
-                "NAME": "LDN",
+                "NAME": "ETA_LDN",
                 "CIC_START": 129,
                 "CIC_COUNT": 30,
                 "CIC_MATCH": "0/3/1."
+            },
+            {
+                "NAME": "TUN_LC",
+                "CIC_START": 1,
+                "CIC_COUNT": 30,
+                "CIC_MATCH": "0/2/0."
+            },
+            {
+                "NAME": "TUN_LDN",
+                "CIC_START": 97,
+                "CIC_COUNT": 30,
+                "CIC_MATCH": "0/2/0."
             }
         ]
     }
